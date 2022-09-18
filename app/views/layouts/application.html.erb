@@ -11,6 +11,36 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        
+        <div class="navbar-header">
+          <%= link_to "Filmes", root_path, class: "navbar-brand" %>
+        </div>
+
+        <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
+            <li> <%= link_to "Adicionar Filme", new_filme_path %> </li>
+          <% end %>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li> <%= button_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" , style: 'background: none; border: none; margin-top: 14px;'%> </li>
+          <% else %>
+            <li> <%= link_to "Entrar", new_user_session_path %> </li>
+            <li> <%= link_to "Cadastro", new_user_registration_path %> </li>
+          <% end %>
+        </ul>
+
+      </div>
+    </nav>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
   </body>
 </html>

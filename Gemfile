@@ -11,6 +11,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
+gem 'devise', '~> 4.8', '>= 4.8.1'
 
 gem 'simple_form', '~> 5.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
