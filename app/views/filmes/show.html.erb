@@ -3,5 +3,9 @@
 <h3> <%= @filme.genero %> </h3>
 <p> <%= @filme.sinopse %> </p>
 
-<%= link_to "Editar filme", edit_filme_path(@filme), class: "btn btn-secondary" %>
-<%= button_to "Excluir filme", @filme, method: :delete, class: "btn btn-danger"%>
+<% if user_signed_in? %>
+    <% if @filme.user_id == current_user.id %>
+        <%= link_to "Editar filme", edit_filme_path(@filme), class: "btn btn-secondary" %>
+        <%= button_to "Excluir filme", @filme, method: :delete, class: "btn btn-danger"%>
+    <% end %>
+<% end %>

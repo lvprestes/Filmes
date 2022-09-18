@@ -1,0 +1,5 @@
+class RemoveUserIdFromFilmes < ActiveRecord::Migration[7.0]
+  def change
+    remove_column :filmes, :user_id, :string
+  end
+end

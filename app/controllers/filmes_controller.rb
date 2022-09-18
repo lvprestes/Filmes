@@ -9,11 +9,13 @@ class FilmesController < ApplicationController
     end
 
     def new
-        @filme = Filme.new
+        @filme = current_user.filmes.build
+        @generos = Genero.all.map{ |g| [g.nome, g.id] }
     end
 
     def create
-        @filme = Filme.new(filme_params)
+        @filme = current_user.filmes.build(filme_params)
+        @filme.id_genero = params[:id_genero]
 
         if @filme.save 
             redirect_to root_path
@@ -43,7 +45,7 @@ class FilmesController < ApplicationController
 
     private
         def filme_params
-            params.require(:filme).permit(:titulo, :sinopse, :ano, :genero, :url_capa)
+            params.require(:filme).permit(:titulo, :sinopse, :ano, :url_capa, :id_genero)
         end
 
         def find_filme
