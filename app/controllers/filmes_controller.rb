@@ -1,5 +1,6 @@
 class FilmesController < ApplicationController
     before_action :find_filme, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, only: [:new, :edit]
 
     def index
        @filmes = Filme.all.order('created_at DESC')
@@ -10,6 +11,7 @@ class FilmesController < ApplicationController
 
     def new
         @filme = current_user.filmes.build
+        puts @generos
     end
 
     def create

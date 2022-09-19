@@ -1,13 +1,10 @@
-<h1> <strong>Filmes</strong> </h1>
-<br/>
-
 <% if @filmes.length > 0%>
 
     <div class="row">
 
         <% @filmes.each do |filme| %>
             <div class="col-md-3">
-                <%= link_to(image_tag(filme.url_capa, style: "height: 350px; width: 250px;"), filme) %>
+                <%= link_to(image_tag(filme.url_capa, style: "height: 350px; width: 250px;", class: "filme"), filme) %>
             </div>
         <% end %>
 

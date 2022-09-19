@@ -1,26 +1,39 @@
 <div class="row">
     <div class="col-md-4">
-        <img src="<%= @filme.url_capa %>" alt="Capa" height="475px" width="325px">
+        <img src="<%= @filme.url_capa %>" alt="Capa" height="475px" width="325px", class="filme-show">
     </div> 
 
     <div class="col-md-8">
-        <h2> <strong> <%= @filme.titulo %> (<%= @filme.ano %>) </strong> </h2>
-        <h3> <strong>Gênero:</strong> <%= @filme.genero %> </h3>
-        <p style="font-size: 1.8rem;"> <%= @filme.sinopse %> </p>
+        <div class="filme-info">
+            <h2> <strong> <%= @filme.titulo %> (<%= @filme.ano %>) </strong> </h2>
+            <h3> <strong>Gênero:</strong> <%= @filme.genero %> </h3>
+            <p style="font-size: 1.8rem;"> <%= @filme.sinopse %> </p>
+
+            <% if user_signed_in? %>
+                <% if @filme.user_id == current_user.id %>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 30px;">
+                        <%= link_to "Editar filme", edit_filme_path(@filme), class: "btn btn-custom2" %>
+                        <%= button_to "Excluir filme", @filme, method: :delete, class: "btn btn-custom2"%>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+        <% if user_signed_in? %>
+<% end %>
     </div>
+    
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        
+        <div class="reviews">
+            <h2> <strong>Reviews (<%= @filme.reviews.length %>)</strong> </h2>
+            <%= render @filme.reviews %>
+            <% if user_signed_in? %>
+                <%= link_to "Adicionar Review", new_filme_review_path(@filme), class:"btn-custom2" %>
+            <% end %>
+        </div>
     </div>
 </div>
 
-<% if user_signed_in? %>
-    <% if @filme.user_id == current_user.id %>
-        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 30px;">
-            <%= link_to "Editar filme", edit_filme_path(@filme), class: "btn btn-secondary" %>
-            <%= button_to "Excluir filme", @filme, method: :delete, class: "btn btn-danger"%>
-        </div>
-    <% end %>
-<% end %>
+</div>
