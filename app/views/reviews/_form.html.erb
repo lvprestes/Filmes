@@ -1,5 +1,5 @@
 <%= simple_form_for([@filme, @filme.reviews.build]) do |f| %>
-    <%= f.input :nota, label: "Nota (0 - 10)" %>
+    <%= f.input :nota, label: "Nota (0 - 10)", input_html: { min: '0', step: '1', max: '10' } %>
     <%= f.input :comentario %>
     <%= f.button :submit, 'Adicionar Review', :class => 'btn-custom2' %>
 <% end %>

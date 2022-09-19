@@ -18,7 +18,7 @@ class FilmesController < ApplicationController
         @filme = current_user.filmes.build(filme_params)
         
         if @filme.save 
-            redirect_to root_path
+            redirect_to filmes_path
         else
             render 'new'
         end

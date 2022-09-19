@@ -1,13 +1,53 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  titulo: MyString
-  sinopse: MyString
-  ano: 1
-  genero: MyString
+  titulo: "Thor: Amor e Trovão"
+  sinopse: "Thor: Amor e Trovão”, da Marvel Studios, encontra o Deus do Trovão numa jornada diferente de tudo o que já enfrentou – a procura pela paz interior. Mas a reforma de Thor é interrompida por um assassino galáctico conhecido como Gorr, o Carniceiro dos Deuses, que procura a extinção dos deuses. Para combater a ameaça, Thor pede a ajuda da Rei Valkiria, de Korg e da ex-namorada Jane Foster, que – para surpresa de Thor – empunha inexplicavelmente o seu martelo mágico, Mjolnir, e se intitula a Poderosa Thor. Juntos, eles embarcam numa angustiante aventura cósmica para descobrir o mistério da vingança do Carniceiro dos Deuses e detê-lo antes que seja tarde demais."
+  ano: 2022
+  genero: "Ação"
+  url_capa: "https://lumiere-a.akamaihd.net/v1/images/56015l10_bigsal_brazil_intpayoff_4x5_d4019af6.jpeg"
 
 two:
-  titulo: MyString
-  sinopse: MyString
-  ano: 1
-  genero: MyString
+  titulo: "Homem-Formiga"
+  sinopse: "Dr. Hank Pym transforma um talentoso ladrão no herói Homem-Formiga. Ele quer impedir que seu antigo pupilo consiga replicar a fórmula da roupa que dá o poder do encolhimento, força sobre-humana e a capacidade de controlar um exército de formigas."
+  ano: -2015
+  genero: "Ação"
+  url_capa: "https://br.web.img3.acsta.net/pictures/15/05/06/15/31/443417.jpg"
+
+three:
+  titulo: "Guardiões da Galáxia Vol. 2"
+  sinopse: "Os Guardiões da Galáxia lutam para manter sua nova família unida enquanto desvendam os mistérios sobre o verdadeiro pai de Peter Quill."
+  ano: 2017
+  genero: "Ação"
+  url_capa: "https://br.web.img3.acsta.net/pictures/17/03/03/19/15/268212.jpg"
+
+four:
+  titulo: "Guardiões da Galáxia"
+  sinopse: "O aventureiro do espaço Peter Quill torna-se presa de caçadores de recompensas depois que rouba a esfera de um vilão traiçoeiro, Ronan. Para escapar do perigo, ele faz uma aliança com um grupo de quatro extraterrestres. Quando Quill descobre que a esfera roubada possui um poder capaz de mudar os rumos do universo, ele e seu grupo deverão proteger o objeto para salvar o futuro da galáxia."
+  ano: 2014
+  genero: "Ação"
+  url_capa: "https://br.web.img3.acsta.net/pictures/14/06/03/21/11/122582.jpg"
+
+five:
+  titulo: "Homem de Ferro 3"
+  sinopse: "Depois de um inimigo reduzir o mundo de Tony Stark a destroços, o Homem de Ferro precisa aprender a confiar em seus instintos para proteger aqueles que ama, especialmente sua namorada, e lutar contra seu maior medo: o fracasso."
+  ano: 2013
+  genero: "Ação"
+  url_capa: "https://upload.wikimedia.org/wikipedia/pt/1/19/Iron_Man_3_poster.jpg"
+
+six:
+  titulo: "Homem de Ferro 2"
+  sinopse: "Em um mundo ciente da existência do Homem de Ferro, o inventor bilionário Tony Stark sofre pressão de todos os lados para compartilhar sua tecnologia com as forças armadas. Ele resiste para divulgar os segredos de sua inigualável armadura, com medo de que estas informações caiam nas mãos erradas. Com a bela Pepper Potts e o amigo "Rhodey" Rhodes ao seu lado, Tony precisa forjar novas alianças e confrontar um inimigo poderoso."
+  ano: 2010
+  genero: "Ação"
+  url_capa: "https://upload.wikimedia.org/wikipedia/pt/9/9a/Homem_de_Ferro_2_-_Poster.jpg?20160420121136"
+
+seven:
+  titulo: "Homem de Ferro"
+  sinopse: "Tony Stark é um industrial bilionário e inventor brilhante que realiza testes bélicos no exterior, mas é sequestrado por terroristas que o forçam a construir uma arma devastadora. Em vez disso, ele constrói uma armadura blindada e enfrenta seus sequestradores. Ao voltar para os EUA, Stark aprimora a armadura e a utiliza para combater o crime."
+  ano: 2008
+  genero: "Ação"
+  url_capa: "https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"
+
+
+
