@@ -1,7 +1,7 @@
 <%= simple_form_for @filme do |f| %>
     <%= f.input :titulo, label: "Título" %>
     <%= f.input :ano, label: "Ano" %>
-    <%= select_tag(:id_genero, options_for_select(@generos), :prompt => "Selecione o gênero") %>
+    <%= f.input :genero, label: "Gênero" %>
     <%= f.input :sinopse, label: "Sinopse" %>
     <%= f.input :url_capa, label: "Capa (URL)" %>
     <%= f.button :submit %>

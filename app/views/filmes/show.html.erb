@@ -1,6 +1,10 @@
 <h2> <strong> <%= @filme.titulo %> </strong> </h2>
-<h4> <%= @filme.ano %> </h4>
-<h3> <%= @filme.genero %> </h3>
+<h3> <%= @filme.ano %> </h3>
+
+<img src="<%= @filme.url_capa %>" alt="Capa" height="350px">
+
+<h4> <strong>Gênero:</strong> <%= @filme.genero %> </h3>
+
 <p> <%= @filme.sinopse %> </p>
 
 <% if user_signed_in? %>
